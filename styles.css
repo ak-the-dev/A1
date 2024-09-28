@@ -24,6 +24,7 @@ nav {
     margin: 20px auto;
     display: flex;
     justify-content: center;
+    flex-wrap: wrap;
 }
 
 nav a {
@@ -69,7 +70,54 @@ footer {
 img {
     max-width: 100%;
     height: auto;
-    width: auto;
     margin: auto;
     display: block;
+}
+
+@media (min-width: 768px) {
+    main {
+        max-width: 90%;
+    }
+
+    nav a {
+        margin: 0 10px;
+    }
+}
+
+@media (max-width: 767px) {
+    header {
+        padding: 20px 0;
+    }
+
+    nav {
+        flex-direction: column;
+    }
+
+    nav a {
+        margin: 10px 0;
+        padding: 15px;
+    }
+
+    main {
+        width: 90%;
+        margin: 10px auto;
+    }
+
+    img {
+        width: 80%;
+    }
+}
+
+@media (max-width: 480px) {
+    nav a {
+        padding: 10px 15px;
+    }
+
+    h1, h2 {
+        font-size: 1.5rem;
+    }
+
+    main {
+        padding: 10px;
+    }
 }
